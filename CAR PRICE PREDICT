@@ -84,7 +84,7 @@ class CarPricePredictor:
 
     def predict(self, X):
         try:
-            model_path = self.get_latest_model_path()
+            model_path =  self.get_latest_model_path()
             model = load_object(file_path=model_path)
             selling_price_pred = model.predict(X)
             return selling_price_pred
